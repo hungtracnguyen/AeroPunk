@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4556710738858802874}
   - component: {fileID: 9103727068439385873}
   - component: {fileID: 4595306947352884349}
+  - component: {fileID: 1647025331463423340}
   m_Layer: 0
   m_Name: Fire Bullet prefab
   m_TagString: Untagged
@@ -108,6 +109,22 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.006411087, y: -0.004211426}
+  m_Size: {x: 0.10380071, y: 0.7581787}
+  m_Direction: 0
+--- !u!70 &1647025331463423340
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561774759519145318}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.006411087, y: -0.004211426}

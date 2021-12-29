@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aeropunk.Stat;
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -21,8 +22,13 @@ namespace Aeropunk.Combat
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            // take damage
-            Debug.Log(collision.gameObject.name + " took damage");
+            // take damage if there is health component
+            if (collision.GetComponent<Health>())
+            {
+            collision.GetComponent<Health>().TakeDamage(_bullet.GetDamage());
+            }
+
+            
             Destroy(gameObject);
         }
     }
