@@ -5,9 +5,17 @@ using UnityEngine;
 
 namespace Aeropunk.Stat
 {
-    public class Health : MonoBehaviour
+    public class CharacterStat : MonoBehaviour
     {
-        [SerializeField] private float _health = 100;
+        [SerializeField] private CharacterStatSO stat = null;
+        private float _health;
+        private float _strength;
+
+        private void Start()
+        {
+            _health = stat.Health;
+            _strength = stat.Strength;
+        }
 
         public void TakeDamage(float damage)
         {
@@ -24,5 +32,9 @@ namespace Aeropunk.Stat
             Destroy(gameObject);
         }
         
+        public float GetStrength()
+        {
+            return _strength;
+        }
     }
 }

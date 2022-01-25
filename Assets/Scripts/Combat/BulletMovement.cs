@@ -23,9 +23,9 @@ namespace Aeropunk.Combat
         private void OnTriggerEnter2D(Collider2D collision)
         {
             // take damage if there is health component
-            if (collision.GetComponent<Health>())
+            if (collision.GetComponent<CharacterStat>())
             {
-            collision.GetComponent<Health>().TakeDamage(_bullet.GetDamage());
+            collision.GetComponent<CharacterStat>().TakeDamage(_bullet.GetDamage());
             }
 
             
